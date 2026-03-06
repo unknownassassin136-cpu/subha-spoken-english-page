@@ -1,0 +1,31 @@
+<section id="services" class="services-section">
+  <div class="services-container">
+    <!-- Section Header -->
+    <div class="section-title">
+      <span class="subtitle">What We Offer</span>
+      <h2>Comprehensive Training Programs</h2>
+      <p>Our institute provides expert-led training in communication, career skills, and personal development to help you succeed.</p>
+    </div>
+    
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button 
+        *ngFor="let cat of categories" 
+        [class.active]="activeCategory === cat.id"
+        (click)="setCategory(cat.id)"
+        class="tab-btn">
+        {{ cat.label }}
+      </button>
+    </div>
+    
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services[activeCategory]">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+

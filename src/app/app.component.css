@@ -1,0 +1,9 @@
+/* App Component Styles */
+main {
+  min-height: 100vh;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

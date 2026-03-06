@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="#home" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="url(#logoGradient)"/>
+          <path d="M12 15C12 15 14 13 20 13C26 13 28 15 28 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 20C12 20 14 18 20 18C26 18 28 20 28 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 25C12 25 14 23 20 23C26 23 28 25 28 25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="28" cy="25" r="3" fill="#D69E2E"/>
+          <defs>
+            <linearGradient id="logoGradient" x1="0" y1="0" x2="40" y2="40">
+              <stop offset="0%" stop-color="#1A365D"/>
+              <stop offset="100%" stop-color="#0D9488"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="brand-name">SUBHA</span>
+        <span class="brand-tagline">SPOKEN ENGLISH</span>
+      </div>
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#contact" class="btn btn-accent">Enroll Now</a>
+    </nav>
+    
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation -->
+  <div class="nav-mobile" [class.open]="isMenuOpen">
+    <nav>
+      <a href="#home" class="nav-link" (click)="scrollTo('home')">Home</a>
+      <a href="#services" class="nav-link" (click)="scrollTo('services')">Services</a>
+      <a href="#about" class="nav-link" (click)="scrollTo('about')">About</a>
+      <a href="#testimonials" class="nav-link" (click)="scrollTo('testimonials')">Testimonials</a>
+      <a href="#contact" class="nav-link" (click)="scrollTo('contact')">Contact</a>
+      <a href="#contact" class="btn btn-accent" (click)="scrollTo('contact')">Enroll Now</a>
+    </nav>
+  </div>
+</header>
+
